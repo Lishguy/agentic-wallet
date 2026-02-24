@@ -91,7 +91,7 @@ A secure, autonomous, and scalable AI agent wallet system built on Solana Devnet
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/Lishguy/agentic-wallet
 cd agentic-wallet
 
 # Install dependencies

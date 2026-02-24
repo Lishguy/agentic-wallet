@@ -7,6 +7,35 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 export default defineConfig({
   base: './',
   plugins: [inspectAttr(), react()],
+
+  build: {
+
+    chunkSizeWarningLimit: 1000,
+
+    rollupOptions: {
+
+      output: {
+
+        manualChunks: {
+
+          react: ['react', 'react-dom'],
+
+          solana: [
+            '@solana/web3.js'
+          ],
+
+          ui: [
+            'lucide-react',
+            'sonner'
+          ]
+
+        }
+
+      }
+
+    }
+
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
